@@ -14,7 +14,7 @@ class HomeScreenView: BaseView {
         appTitleLbl.text = "Personal Menager"
         appTitleLbl.textAlignment = .center
         appTitleLbl.font = appTitleLbl.font.withSize(24)
-        appTitleLbl.textColor = .systemBlue
+        appTitleLbl.textColor = .tintColor
         return appTitleLbl
     }()
     

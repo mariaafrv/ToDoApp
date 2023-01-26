@@ -23,7 +23,7 @@ class ToDoScreenView: BaseView {
         let tasksLbl = UILabel()
         tasksLbl.text = "My Tasks"
         tasksLbl.font = tasksLbl.font.withSize(26)
-        tasksLbl.textColor = .systemBlue
+        tasksLbl.textColor = UIColor.tintColor
         return tasksLbl
     }()
     

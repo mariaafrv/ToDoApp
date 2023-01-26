@@ -9,6 +9,13 @@ import UIKit
 
 class TaskDetailsScreenView: BaseView {
 
+    lazy var background: UIView = {
+        let background = UIView()
+        background.isUserInteractionEnabled = true
+        background.backgroundColor = .systemGray6
+        return background
+    }()
+    
     let taskNameLbl: UITextField = {
         let taskNameLbl = UITextField()
         taskNameLbl.text = ""
@@ -20,6 +27,7 @@ class TaskDetailsScreenView: BaseView {
     lazy var editButton: UIImageView = {
         let editButton = UIImageView()
         editButton.image = UIImage(systemName: "pencil")
+        editButton.isUserInteractionEnabled = true
         return editButton
     }()
     
@@ -39,21 +47,66 @@ class TaskDetailsScreenView: BaseView {
         line.backgroundColor = .systemGray
         return line
     }()
+        
+    lazy var descriptionTextField: UITextView = {
+        let descriptionTextField = UITextView()
+        descriptionTextField.layer.borderWidth = 1
+        descriptionTextField.layer.borderColor = UIColor.systemGray5.cgColor
+        descriptionTextField.layer.cornerRadius = 8
+        descriptionTextField.layer.masksToBounds = true
+        descriptionTextField.font = .systemFont(ofSize: 16)
+        descriptionTextField.isEditable = false
+        descriptionTextField.text = "Enter your task descriptions"
+        descriptionTextField.textColor = UIColor.lightGray
+        return descriptionTextField
+    }()
+    
+
+    
+    let pencilButton: UIButton = {
+        let pencilButton = UIButton()
+        let pencilSign = UIImage(systemName: "pencil")
+        pencilButton.setImage(pencilSign, for: .normal)
+        return pencilButton
+    }()
+    
+    lazy var saveButton: UIButton = {
+        let saveButton = UIButton(configuration: .filled())
+        saveButton.setTitle("Save", for: .normal)
+        saveButton.setTitle("Insert task info", for: .disabled)
+        saveButton.isEnabled = false
+        return saveButton
+    }()
 
     override func addSubviews() {
+        addSubview(background)
         addSubview(taskNameLbl)
         addSubview(tagLbl)
         addSubview(editButton)
         addSubview(line)
+        addSubview(descriptionTextField)
+        addSubview(pencilButton)
+        addSubview(saveButton)
+    
     }
     
+    
     override func addConstraints() {
+        
+        background.anchor(
+            top: topAnchor,
+            leading: leadingAnchor,
+            bottom: bottomAnchor,
+            trailing: trailingAnchor,
+            padding: .init(top: 0, left: 0, bottom: 0, right: 0),
+            size: .init(width: frame.width, height: frame.height))
+        
         taskNameLbl.anchor(
             top: safeAreaLayoutGuide.topAnchor,
             leading: safeAreaLayoutGuide.leadingAnchor,
             bottom: nil,
             trailing: nil,
-            padding: .init(top: 20, left: 20, bottom: 0, right: 0),
+            padding: .init(top: 40, left: 20, bottom: 0, right: 0),
             size: .init(width: 0, height: 40))
         
         tagLbl.anchor(
@@ -79,6 +132,34 @@ class TaskDetailsScreenView: BaseView {
             trailing: safeAreaLayoutGuide.trailingAnchor,
             padding: .init(top: 25, left: 10, bottom: 0, right: 60),
             size: .init(width: frame.width, height: 1))
+        
+        descriptionTextField.anchor(
+            top: line.bottomAnchor,
+            leading: line.leadingAnchor,
+            bottom: nil,
+            trailing: nil,
+            padding: .init(top: 30, left: 3, bottom: 0, right: 3),
+            size: .init(width: 360, height: 160))
+        
+        pencilButton.anchor(
+            top: descriptionTextField.topAnchor,
+            leading: nil,
+            bottom: nil,
+            trailing: descriptionTextField.trailingAnchor,
+            padding: .init(top: 2, left: 0, bottom: 0, right: 0),
+            size: .init(width: 40, height: 40))
+        
+        saveButton.anchor(
+            top: descriptionTextField.bottomAnchor,
+            leading: nil,
+            bottom: nil,
+            trailing: nil,
+            padding: .init(top: 30, left: 0, bottom: 0, right: 0),
+            size: .init(width: 360, height: 40))
+        
+        saveButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
+    
+    
 
 }

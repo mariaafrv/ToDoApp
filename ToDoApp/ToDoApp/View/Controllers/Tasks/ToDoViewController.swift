@@ -27,8 +27,6 @@ class ToDoViewController: UIViewController {
         customView.collectionView.register(ToDoListCollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         customView.collectionView.backgroundColor = .systemGray6
         customView.addButton.addTarget(self, action: #selector(addNewTask), for: .touchUpInside)
-        
-        
     }
     
     func getTaks() -> Task{
@@ -41,9 +39,8 @@ class ToDoViewController: UIViewController {
     @objc func addNewTask(){
         tasksArr.append(getTaks())
         customView.collectionView.reloadData()
-        
     }
-    
+
 }
 
 extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -70,8 +67,17 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         taskDetailsViewController.getTaskName(name: taskDetails.name)
         taskDetailsViewController.getTag(tag: taskDetails.urgency)
+        taskDetailsViewController.getDesc(name: taskDetails.description)
+        
+        taskDetailsViewController.updateTaskName = { name, tag, desc in
+            let task = Task(name: name, urgency: tag, description: desc)
+            
+            self.tasksArr[indexPath.item] = task
+            self.customView.collectionView.reloadData()
+            taskDetailsViewController.dismiss(animated: true)
+        }
 
-        navigationController?.pushViewController(taskDetailsViewController, animated: true)
+        present(taskDetailsViewController, animated: true)
     }
     
    
