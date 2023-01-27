@@ -55,10 +55,11 @@ class TaskDetailsScreenView: BaseView {
         descriptionTextField.layer.cornerRadius = 8
         descriptionTextField.layer.masksToBounds = true
         descriptionTextField.font = .systemFont(ofSize: 16)
-        descriptionTextField.isEditable = false
         descriptionTextField.text = "Enter your task descriptions"
-        descriptionTextField.textColor = UIColor.lightGray
+        descriptionTextField.textColor = UIColor.placeholderText
+        descriptionTextField.isUserInteractionEnabled = true
         return descriptionTextField
+        
     }()
     
 
