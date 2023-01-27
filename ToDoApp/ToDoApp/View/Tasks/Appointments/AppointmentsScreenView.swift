@@ -8,12 +8,14 @@
 import UIKit
 
 class AppointmentsScreenView: BaseView {
-
+    
+    let cellId = "cellId"
+    
     let appointmentsLbl: UILabel = {
         let tasksLbl = UILabel()
         tasksLbl.text = "My Appointments"
         tasksLbl.font = tasksLbl.font.withSize(26)
-        tasksLbl.textColor = .systemBlue
+        tasksLbl.textColor = .tintColor
         return tasksLbl
     }()
     
@@ -25,6 +27,7 @@ class AppointmentsScreenView: BaseView {
         addAppointment.layer.borderColor = UIColor.systemGray.cgColor
         addAppointment.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 15, height: addAppointment.frame.height))
         addAppointment.leftViewMode = .always
+        addAppointment.placeholder = "Enter your appointments"
         return addAppointment
     }()
     
@@ -35,10 +38,20 @@ class AppointmentsScreenView: BaseView {
         return addButton
     }()
     
+    
+    let collectionView: UICollectionView = {
+        let collectionView = UICollectionView(
+            frame:.zero,
+            collectionViewLayout: UICollectionViewFlowLayout()
+        )
+        return collectionView
+    }()
+    
     override func addSubviews() {
         addSubview(appointmentsLbl)
         addSubview(addAppointmentsTextField)
-        addAppointmentsTextField.addSubview(addButton)
+        addSubview(addButton)
+        addSubview(collectionView)
     }
     
     override func addConstraints() {
@@ -47,8 +60,8 @@ class AppointmentsScreenView: BaseView {
             leading: addAppointmentsTextField.leadingAnchor,
             bottom: nil,
             trailing: nil,
-            padding: .init(top: 60, left: 0, bottom: 0, right: 0),
-            size: .init(width: 200, height: 40))
+            padding: .init(top: 30, left: 0, bottom: 0, right: 0),
+            size: .init(width: 200, height: 30))
         
         addAppointmentsTextField.anchor(
             top: appointmentsLbl.bottomAnchor,
@@ -68,6 +81,13 @@ class AppointmentsScreenView: BaseView {
             padding: .init(top: 5, left: 2, bottom: 0, right: 0),
             size: .init(width: 60, height: 40))
         
+        collectionView.anchor(
+            top: addAppointmentsTextField.bottomAnchor,
+            leading: addAppointmentsTextField.leadingAnchor,
+            bottom: nil,
+            trailing: addAppointmentsTextField.trailingAnchor,
+            padding: .init(top: 10, left: 2, bottom: 0, right: 2),
+            size: .init(width: 360, height: 500))
         
     }
 

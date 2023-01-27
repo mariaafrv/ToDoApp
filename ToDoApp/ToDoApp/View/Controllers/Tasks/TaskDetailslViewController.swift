@@ -45,9 +45,6 @@ class TaskDetailslViewController: UIViewController {
         
         let tapGestureRecognizerBg = UITapGestureRecognizer(target: self, action: #selector(makeLbldisable))
         customView.background.addGestureRecognizer(tapGestureRecognizerBg)
-
-//        let tapGestureRecognizerDesc = UITapGestureRecognizer(target: self, action: #selector(makeFieldEditable))
-//        customView.descriptionTextField.addGestureRecognizer(tapGestureRecognizerDesc)
         
         customView.saveButton.addTarget(self, action: #selector(editTasks), for: .touchUpInside)
     }
@@ -66,15 +63,8 @@ class TaskDetailslViewController: UIViewController {
     @objc func editTasks() {
         updateTaskName(customView.taskNameLbl.text ?? "", "Easy", customView.descriptionTextField.text ?? "")
     }
-    
-    @objc func makeFieldEditable(){
-//        customView.descriptionTextField.textColor = UIColor.label
-//        customView.saveButton.isEnabled = true
-//        if customView.descriptionTextField.text == "Enter your task descriptions" {
-//            customView.descriptionTextField.text = nil
-//        }
-    }
 }
+
 
 extension TaskDetailslViewController: UITextFieldDelegate, UITextViewDelegate {
     

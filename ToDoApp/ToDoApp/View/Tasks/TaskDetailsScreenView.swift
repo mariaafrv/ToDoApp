@@ -62,8 +62,6 @@ class TaskDetailsScreenView: BaseView {
         
     }()
     
-
-    
     let pencilButton: UIButton = {
         let pencilButton = UIButton()
         let pencilSign = UIImage(systemName: "pencil")

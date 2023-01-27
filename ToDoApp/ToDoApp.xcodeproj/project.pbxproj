@@ -26,6 +26,8 @@
 		4D001F52298163A700B27D86 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F51298163A700B27D86 /* Task.swift */; };
 		4D001F55298179BE00B27D86 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F54298179BE00B27D86 /* ToDoViewModel.swift */; };
 		4D001F572981940C00B27D86 /* ColorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F562981940C00B27D86 /* ColorMap.swift */; };
+		4D04BD9C298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04BD9B298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift */; };
+		4D04BD9E298445A0008FCCC2 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04BD9D298445A0008FCCC2 /* Appointment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		4D001F51298163A700B27D86 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		4D001F54298179BE00B27D86 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
 		4D001F562981940C00B27D86 /* ColorMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMap.swift; sourceTree = "<group>"; };
+		4D04BD9B298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D04BD9D298445A0008FCCC2 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				4D001F3B2980128F00B27D86 /* AppointmentsViewController.swift */,
+				4D04BD9B298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift */,
 			);
 			path = Appointments;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				4D001F51298163A700B27D86 /* Task.swift */,
+				4D04BD9D298445A0008FCCC2 /* Appointment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,12 +288,14 @@
 				4D001F3E298014CF00B27D86 /* HomeScreenView.swift in Sources */,
 				4D001F52298163A700B27D86 /* Task.swift in Sources */,
 				4D001F4129801E4400B27D86 /* ToDoScreenView.swift in Sources */,
+				4D04BD9E298445A0008FCCC2 /* Appointment.swift in Sources */,
 				4D001F572981940C00B27D86 /* ColorMap.swift in Sources */,
 				4D001F182980003700B27D86 /* AppDelegate.swift in Sources */,
 				4D001F4929815F1200B27D86 /* TaskDetailslViewController.swift in Sources */,
 				4D001F1A2980003700B27D86 /* SceneDelegate.swift in Sources */,
 				4D001F3629800C3000B27D86 /* UIView+Extension.swift in Sources */,
 				4D001F452980464A00B27D86 /* ToDoListCollectionViewCell.swift in Sources */,
+				4D04BD9C298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift in Sources */,
 				4D001F3229800B8200B27D86 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
