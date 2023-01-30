@@ -77,6 +77,9 @@ class ToDoListCollectionViewCell: BaseCell {
             
         } else if Recognizer.state == .ended {
                 self.deleteTask()
+            
+
+        
         }
     
     }

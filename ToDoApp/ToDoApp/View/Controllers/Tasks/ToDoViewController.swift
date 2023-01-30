@@ -16,13 +16,6 @@ class ToDoViewController: UIViewController {
     private var cellId = "cellId"
     
     
-    lazy var longPress: UILongPressGestureRecognizer = {
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(removeItem))
-        longPress.minimumPressDuration = 0.5
-        return longPress
-    }()
-    
-    
     override func loadView() {
         let view = customView
         self.view = view
@@ -36,6 +29,7 @@ class ToDoViewController: UIViewController {
         customView.collectionView.backgroundColor = .systemGray6
         customView.addButton.addTarget(self, action: #selector(addNewTask), for: .touchUpInside)
     }
+    
     
     func getTaks() -> Task{
         
@@ -73,7 +67,8 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 self.tasksArr.remove(at: indexPath.item)
                 collectionView.reloadData()
             }))
-            alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: {(_: UIAlertAction!) in
+            alert.addAction(UIAlertAction(title: "Cancelar", style: .default,
+handler: {(_: UIAlertAction!) in
             }))
             
             self.present(alert, animated: true, completion: nil)
