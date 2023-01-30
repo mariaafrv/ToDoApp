@@ -11,7 +11,7 @@ class TaskDetailslViewController: UIViewController {
 
     let customView = TaskDetailsScreenView()
     
-    var updateTaskName: (String, String, String) -> Void = {_, _, _ in}
+    var updateTaskName: (String, String, String, Date) -> Void = {_, _, _, _ in}
     
     func getTaskName(name: String) {
         customView.taskNameLbl.text = name
@@ -28,6 +28,10 @@ class TaskDetailslViewController: UIViewController {
         print(tag)
         customView.tagLbl.text = tag
         customView.tagLbl.backgroundColor = taskColorMap()[tag]
+    }
+    
+    func getDate(date: Date){
+        customView.taskDate.date = date
     }
     
     override func loadView() {
@@ -47,6 +51,12 @@ class TaskDetailslViewController: UIViewController {
         customView.background.addGestureRecognizer(tapGestureRecognizerBg)
         
         customView.saveButton.addTarget(self, action: #selector(editTasks), for: .touchUpInside)
+        customView.taskDate.addTarget(self, action: #selector(saveDate), for: .valueChanged)
+       
+    }
+    
+    @objc func saveDate() {
+            customView.saveButton.isEnabled = true
     }
     
     @objc func makeLblEditable() {
@@ -61,7 +71,7 @@ class TaskDetailslViewController: UIViewController {
     }
     
     @objc func editTasks() {
-        updateTaskName(customView.taskNameLbl.text ?? "", "Easy", customView.descriptionTextField.text ?? "")
+        updateTaskName(customView.taskNameLbl.text ?? "", "Easy", customView.descriptionTextField.text ?? "", customView.taskDate.date )
     }
 }
 

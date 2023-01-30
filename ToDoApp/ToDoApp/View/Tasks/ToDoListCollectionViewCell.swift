@@ -9,7 +9,8 @@ import UIKit
 
 class ToDoListCollectionViewCell: BaseCell {
     var updateTask: (Task) -> Void = {_ in}
-
+    var deleteTask: () -> Void = {}
+    
     var tasksView: Task? {
         didSet {
             taskLbl.text = tasksView?.name
@@ -21,6 +22,7 @@ class ToDoListCollectionViewCell: BaseCell {
         cell.layer.cornerRadius = 6
         cell.layer.borderWidth = 1
         cell.layer.borderColor = UIColor.systemGray.cgColor
+        cell.isUserInteractionEnabled = true
         return cell
     }()
     
@@ -49,7 +51,7 @@ class ToDoListCollectionViewCell: BaseCell {
             self.menuButton.backgroundColor = colorMap[action.title]
             self.updateTask(self.tasksView!)
         }
-
+        
         return UIMenu(title: "Level of urgency", children: [
             UIAction(title: "Easy", handler: handleMenuChange),
             UIAction(title: "Medium", handler: handleMenuChange),
@@ -63,6 +65,20 @@ class ToDoListCollectionViewCell: BaseCell {
         cell.addSubview(menuButton)
         
         menuButton.menu = setLevel()
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(removeItem))
+        longPress.minimumPressDuration = 0.5
+        
+        cell.addGestureRecognizer(longPress)
+    }
+    
+    @objc func removeItem(Recognizer: UILongPressGestureRecognizer){
+        if Recognizer.state == .began {
+            
+        } else if Recognizer.state == .ended {
+                self.deleteTask()
+        }
+    
     }
     
     override func addConstraints() {

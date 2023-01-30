@@ -42,6 +42,14 @@ class TaskDetailsScreenView: BaseView {
         return tagLbl
     }()
     
+    lazy var taskDate: UIDatePicker = {
+        let taskDate = UIDatePicker()
+        taskDate.timeZone = NSTimeZone.local
+        taskDate.backgroundColor = .systemGray6
+        taskDate.minimumDate = .now
+        return taskDate
+    }()
+    
     lazy var line: UIView = {
         let line = UIView()
         line.backgroundColor = .systemGray
@@ -72,7 +80,6 @@ class TaskDetailsScreenView: BaseView {
     lazy var saveButton: UIButton = {
         let saveButton = UIButton(configuration: .filled())
         saveButton.setTitle("Save", for: .normal)
-        saveButton.setTitle("Insert task info", for: .disabled)
         saveButton.isEnabled = false
         return saveButton
     }()
@@ -82,11 +89,11 @@ class TaskDetailsScreenView: BaseView {
         addSubview(taskNameLbl)
         addSubview(tagLbl)
         addSubview(editButton)
+        addSubview(taskDate)
         addSubview(line)
         addSubview(descriptionTextField)
         addSubview(pencilButton)
         addSubview(saveButton)
-    
     }
     
     
@@ -114,7 +121,7 @@ class TaskDetailsScreenView: BaseView {
             bottom: nil,
             trailing: nil,
             padding: .init(top: 20, left: 0, bottom: 0, right: 0),
-            size: .init(width: 75, height: 25))
+            size: .init(width: 75, height: 30))
         
         editButton.anchor(
             top: taskNameLbl.topAnchor,
@@ -123,6 +130,14 @@ class TaskDetailsScreenView: BaseView {
             trailing: nil,
             padding: .init(top: 3, left: 5, bottom: 0, right: 0),
             size: .init(width: 30, height: 32))
+        
+        taskDate.anchor(
+            top: tagLbl.topAnchor,
+            leading: nil,
+            bottom: nil,
+            trailing: background.trailingAnchor,
+            padding: .init(top: 0, left: 0, bottom: 0, right: 15),
+            size: .init(width: 200, height: 30))
         
         line.anchor(
             top: tagLbl.bottomAnchor,

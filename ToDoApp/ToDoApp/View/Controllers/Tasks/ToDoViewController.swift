@@ -15,6 +15,14 @@ class ToDoViewController: UIViewController {
     
     private var cellId = "cellId"
     
+    
+    lazy var longPress: UILongPressGestureRecognizer = {
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(removeItem))
+        longPress.minimumPressDuration = 0.5
+        return longPress
+    }()
+    
+    
     override func loadView() {
         let view = customView
         self.view = view
@@ -30,9 +38,12 @@ class ToDoViewController: UIViewController {
     }
     
     func getTaks() -> Task{
+        
+        let date = Date()
         let newTask = Task(name: customView.addTaskTextField.text ?? "",
                            urgency: "Easy",
-                           description: "")
+                           description: "",
+                           date: date)
         return newTask
     }
     
@@ -54,6 +65,20 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.updateTask = { task in
             self.tasksArr[indexPath.item] = task
         }
+        
+        cell.deleteTask = {
+            let alert = UIAlertController(title: "Remover", message: "Tem certeza que deseja remover sua task?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { _ in
+                self.tasksArr.remove(at: indexPath.item)
+                collectionView.reloadData()
+            }))
+            alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: {(_: UIAlertAction!) in
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
+        
         return cell
     }
     
@@ -64,22 +89,24 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let taskDetailsViewController = TaskDetailslViewController()
         let taskDetails = tasksArr[indexPath.item]
-        
+            
         taskDetailsViewController.getTaskName(name: taskDetails.name)
         taskDetailsViewController.getTag(tag: taskDetails.urgency)
         taskDetailsViewController.getDesc(name: taskDetails.description)
+        taskDetailsViewController.getDate(date: taskDetails.date)
         
-        taskDetailsViewController.updateTaskName = { name, tag, desc in
-            let task = Task(name: name, urgency: tag, description: desc)
+        taskDetailsViewController.updateTaskName = { name, tag, desc, date in
+            let task = Task(name: name, urgency: tag, description: desc, date: date)
             
             self.tasksArr[indexPath.item] = task
             self.customView.collectionView.reloadData()
             taskDetailsViewController.dismiss(animated: true)
+            
         }
 
         present(taskDetailsViewController, animated: true)
     }
-    
-   
-}
 
+   
+
+}
