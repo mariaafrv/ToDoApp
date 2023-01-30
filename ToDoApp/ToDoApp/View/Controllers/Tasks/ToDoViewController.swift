@@ -45,7 +45,7 @@ class ToDoViewController: UIViewController {
         tasksArr.append(getTaks())
         customView.collectionView.reloadData()
     }
-
+    
 }
 
 extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -61,17 +61,15 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         
         cell.deleteTask = {
-            let alert = UIAlertController(title: "Remover", message: "Tem certeza que deseja remover sua task?", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: { _ in
-                self.tasksArr.remove(at: indexPath.item)
-                collectionView.reloadData()
-            }))
-            alert.addAction(UIAlertAction(title: "Cancelar", style: .default,
-handler: {(_: UIAlertAction!) in
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
+            Alert.showAlert(controller: self, titulo: "Remover", mensagem: "Tem certeza que deseja remover sua task?", actions: [
+                UIAlertAction(title: "Confirmar", style: .default, handler: { _ in
+                    self.tasksArr.remove(at: indexPath.item)
+                    collectionView.reloadData()
+                }),
+                UIAlertAction(title: "Cancelar", style: .default, handler: {(_: UIAlertAction!) in
+                })
+            ], preferredStyle: .alert)
         }
         
         return cell
@@ -84,7 +82,7 @@ handler: {(_: UIAlertAction!) in
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let taskDetailsViewController = TaskDetailslViewController()
         let taskDetails = tasksArr[indexPath.item]
-            
+        
         taskDetailsViewController.getTaskName(name: taskDetails.name)
         taskDetailsViewController.getTag(tag: taskDetails.urgency)
         taskDetailsViewController.getDesc(name: taskDetails.description)
@@ -98,10 +96,10 @@ handler: {(_: UIAlertAction!) in
             taskDetailsViewController.dismiss(animated: true)
             
         }
-
+        
         present(taskDetailsViewController, animated: true)
     }
-
-   
-
+    
+    
+    
 }

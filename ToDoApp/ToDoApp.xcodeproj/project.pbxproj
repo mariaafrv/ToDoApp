@@ -28,6 +28,7 @@
 		4D001F572981940C00B27D86 /* ColorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F562981940C00B27D86 /* ColorMap.swift */; };
 		4D04BD9C298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04BD9B298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift */; };
 		4D04BD9E298445A0008FCCC2 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04BD9D298445A0008FCCC2 /* Appointment.swift */; };
+		4D82957229883175009E02E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82957129883175009E02E9 /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		4D001F562981940C00B27D86 /* ColorMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMap.swift; sourceTree = "<group>"; };
 		4D04BD9B298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D04BD9D298445A0008FCCC2 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		4D82957129883175009E02E9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			children = (
 				4D001F51298163A700B27D86 /* Task.swift */,
 				4D04BD9D298445A0008FCCC2 /* Appointment.swift */,
+				4D82957129883175009E02E9 /* Alert.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				4D001F3629800C3000B27D86 /* UIView+Extension.swift in Sources */,
 				4D001F452980464A00B27D86 /* ToDoListCollectionViewCell.swift in Sources */,
 				4D04BD9C298443C1008FCCC2 /* AppointmentsCollectionViewCell.swift in Sources */,
+				4D82957229883175009E02E9 /* Alert.swift in Sources */,
 				4D001F3229800B8200B27D86 /* BaseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
