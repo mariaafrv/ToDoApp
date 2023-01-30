@@ -13,24 +13,23 @@ class TaskDetailslViewController: UIViewController {
     
     var updateTaskName: (String, String, String, Date) -> Void = {_, _, _, _ in}
     
-    func getTaskName(name: String) {
-        customView.taskNameLbl.text = name
+    init(taskName: String, info: String, tag: String, date: Date) {
+        super.init(nibName: "TaskDetailslViewController", bundle: nil)
+        setDataCustomView(taskName: taskName, info: info, tag: tag, date: date)
     }
     
-    func getDesc(name: String) {
-        if name != "" {
-            customView.descriptionTextField.text = name
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setDataCustomView(taskName: String, info: String, tag: String, date: Date) {
+        customView.taskNameLbl.text = taskName
+        if info != "" {
+            customView.descriptionTextField.text = info
             customView.descriptionTextField.textColor = UIColor.label
         }
-    }
-    
-    func getTag(tag: String) {
-        print(tag)
         customView.tagLbl.text = tag
         customView.tagLbl.backgroundColor = taskColorMap()[tag]
-    }
-    
-    func getDate(date: Date){
         customView.taskDate.date = date
     }
     
@@ -56,7 +55,7 @@ class TaskDetailslViewController: UIViewController {
     }
     
     @objc func saveDate() {
-            customView.saveButton.isEnabled = true
+        customView.saveButton.isEnabled = true
     }
     
     @objc func makeLblEditable() {
@@ -75,13 +74,12 @@ class TaskDetailslViewController: UIViewController {
     }
 }
 
-
 extension TaskDetailslViewController: UITextFieldDelegate, UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         if customView.descriptionTextField.text == "Enter your task descriptions" {
-                   customView.descriptionTextField.text = nil
-               }
+                customView.descriptionTextField.text = nil
+        }
         textView.textColor = .label
         customView.saveButton.isEnabled = true
     }

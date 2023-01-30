@@ -173,7 +173,4 @@ class TaskDetailsScreenView: BaseView {
         
         saveButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
-    
-    
-
 }

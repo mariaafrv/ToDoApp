@@ -80,13 +80,9 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let taskDetailsViewController = TaskDetailslViewController()
         let taskDetails = tasksArr[indexPath.item]
         
-        taskDetailsViewController.getTaskName(name: taskDetails.name)
-        taskDetailsViewController.getTag(tag: taskDetails.urgency)
-        taskDetailsViewController.getDesc(name: taskDetails.description)
-        taskDetailsViewController.getDate(date: taskDetails.date)
+        let taskDetailsViewController = TaskDetailslViewController(taskName: taskDetails.name, info: taskDetails.description, tag: taskDetails.urgency, date: taskDetails.date)
         
         taskDetailsViewController.updateTaskName = { name, tag, desc, date in
             let task = Task(name: name, urgency: tag, description: desc, date: date)
@@ -94,12 +90,8 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
             self.tasksArr[indexPath.item] = task
             self.customView.collectionView.reloadData()
             taskDetailsViewController.dismiss(animated: true)
-            
         }
         
         present(taskDetailsViewController, animated: true)
     }
-    
-    
-    
 }
