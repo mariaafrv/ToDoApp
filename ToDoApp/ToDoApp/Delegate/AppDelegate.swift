@@ -7,6 +7,8 @@
 
 import UIKit
 
+let stringLiteral = String(stringLiteral: "")
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -19,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
             window?.backgroundColor = .systemGray6
             window?.tintColor = .systemRed
-            window?.rootViewController = UINavigationController(rootViewController: ViewController())
+            window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
             return true
         }
 

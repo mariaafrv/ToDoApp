@@ -1,13 +1,6 @@
-//
-//  HomeScreenView.swift
-//  ToDoApp
-//
-//  Created by unicred on 24/01/23.
-//
-
 import UIKit
 
-class HomeScreenView: BaseView {
+class LoginScreenView: BaseView {
 
     lazy var appTitleLbl: UILabel = {
         let appTitleLbl = UILabel()
@@ -61,6 +54,19 @@ class HomeScreenView: BaseView {
         return initialButton
     }()
     
+    lazy var registerLbl: UILabel = {
+        let registerLbl = UILabel()
+        registerLbl.text = "Don't have an account?"
+        return registerLbl
+    }()
+    
+    lazy var registerButton: UIButton = {
+        let registerButton = UIButton()
+        registerButton.setTitle("Register", for: .normal)
+        registerButton.setTitleColor(UIColor.tintColor, for: .normal)
+        return registerButton
+    }()
+    
     
     override func addSubviews() {
         addSubview(appTitleLbl)
@@ -68,6 +74,8 @@ class HomeScreenView: BaseView {
         addSubview(passwordTextField)
         addSubview(forgotPasswordButton)
         addSubview(initialButton)
+        addSubview(registerLbl)
+        addSubview(registerButton)
     }
     
     override func addConstraints() {
@@ -119,6 +127,26 @@ class HomeScreenView: BaseView {
             size: .init(width: 250, height: 60))
         
         initialButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        registerLbl.anchor(
+            top: initialButton.bottomAnchor,
+            leading: nil,
+            bottom: nil,
+            trailing: nil,
+            padding: .init(top: 50, left: 0, bottom: 0, right: 0),
+            size: .init(width: 180, height: 40))
+        
+        registerLbl.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        registerButton.anchor(
+            top: registerLbl.bottomAnchor,
+            leading: nil,
+            bottom: nil,
+            trailing: nil,
+            padding: .init(top: 0, left: 0, bottom: 0, right: 0),
+            size: .init(width: 100, height: 10))
+        
+        registerButton.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
 
 }

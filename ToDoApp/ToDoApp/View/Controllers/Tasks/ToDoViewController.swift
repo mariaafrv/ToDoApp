@@ -1,10 +1,3 @@
-//
-//  NextViewController.swift
-//  ToDoApp
-//
-//  Created by unicred on 24/01/23.
-//
-
 import UIKit
 
 class ToDoViewController: UIViewController {

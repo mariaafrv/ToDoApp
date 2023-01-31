@@ -1,10 +1,3 @@
-//
-//  TaskDetaislViewController.swift
-//  ToDoApp
-//
-//  Created by unicred on 25/01/23.
-//
-
 import UIKit
 
 class TaskDetailslViewController: UIViewController {

@@ -1,10 +1,3 @@
-//
-//  ToDoListTableViewCell.swift
-//  ToDoApp
-//
-//  Created by unicred on 24/01/23.
-//
-
 import UIKit
 
 class ToDoListCollectionViewCell: BaseCell {
@@ -26,13 +19,13 @@ class ToDoListCollectionViewCell: BaseCell {
         return cell
     }()
     
-    let taskLbl: UILabel = {
+    lazy var taskLbl: UILabel = {
         let taskLbl = UILabel()
         taskLbl.text = "my task"
         return taskLbl
     }()
     
-    let menuButton: UIButton = {
+    lazy var menuButton: UIButton = {
         let menuButton = UIButton()
         menuButton.showsMenuAsPrimaryAction = true
         menuButton.changesSelectionAsPrimaryAction = true
@@ -77,9 +70,6 @@ class ToDoListCollectionViewCell: BaseCell {
             
         } else if Recognizer.state == .ended {
                 self.deleteTask()
-            
-
-        
         }
     
     }

@@ -1,17 +1,10 @@
-//
-//  ToDoViewController.swift
-//  ToDoApp
-//
-//  Created by unicred on 24/01/23.
-//
-
 import UIKit
 
 class ToDoScreenView: BaseView {
     
     let cellId = "cellId"
     
-    let collectionView: UICollectionView = {
+    lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(
             frame:.zero,
             collectionViewLayout: UICollectionViewFlowLayout()
@@ -19,7 +12,7 @@ class ToDoScreenView: BaseView {
         return collectionView
     }()
     
-    let tasksLbl: UILabel = {
+    lazy var tasksLbl: UILabel = {
         let tasksLbl = UILabel()
         tasksLbl.text = "My Tasks"
         tasksLbl.font = tasksLbl.font.withSize(26)
@@ -27,7 +20,7 @@ class ToDoScreenView: BaseView {
         return tasksLbl
     }()
     
-    let addTaskTextField: UITextField = {
+    lazy var addTaskTextField: UITextField = {
         let addTask = UITextField()
         addTask.backgroundColor = .systemGray4
         addTask.placeholder = "Enter your tasks"
@@ -41,7 +34,7 @@ class ToDoScreenView: BaseView {
     
 
     
-    let addButton: UIButton = {
+    lazy var addButton: UIButton = {
         let addButton = UIButton()
         let plusSign = UIImage(systemName: "plus")
         addButton.setImage(plusSign, for: .normal)

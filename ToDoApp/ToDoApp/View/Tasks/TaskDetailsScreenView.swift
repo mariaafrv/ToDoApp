@@ -1,10 +1,3 @@
-//
-//  TaskDetailsScreenView.swift
-//  ToDoApp
-//
-//  Created by unicred on 25/01/23.
-//
-
 import UIKit
 
 class TaskDetailsScreenView: BaseView {
@@ -16,7 +9,7 @@ class TaskDetailsScreenView: BaseView {
         return background
     }()
     
-    let taskNameLbl: UITextField = {
+    lazy var taskNameLbl: UITextField = {
         let taskNameLbl = UITextField()
         taskNameLbl.text = ""
         taskNameLbl.font = .systemFont(ofSize: 28)
@@ -70,7 +63,7 @@ class TaskDetailsScreenView: BaseView {
         
     }()
     
-    let pencilButton: UIButton = {
+    lazy var pencilButton: UIButton = {
         let pencilButton = UIButton()
         let pencilSign = UIImage(systemName: "pencil")
         pencilButton.setImage(pencilSign, for: .normal)
