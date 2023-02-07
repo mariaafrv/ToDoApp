@@ -17,7 +17,6 @@
 		4D001F3A298011C800B27D86 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F39298011C800B27D86 /* ToDoViewController.swift */; };
 		4D001F3E298014CF00B27D86 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F3D298014CF00B27D86 /* LoginScreenView.swift */; };
 		4D001F4129801E4400B27D86 /* ToDoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F4029801E4400B27D86 /* ToDoScreenView.swift */; };
-		4D001F432980253B00B27D86 /* AppointmentsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F422980253B00B27D86 /* AppointmentsScreenView.swift */; };
 		4D001F452980464A00B27D86 /* ToDoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F442980464A00B27D86 /* ToDoListCollectionViewCell.swift */; };
 		4D001F472980465500B27D86 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F462980465500B27D86 /* BaseCell.swift */; };
 		4D001F4929815F1200B27D86 /* TaskDetailslViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F4829815F1200B27D86 /* TaskDetailslViewController.swift */; };
@@ -26,6 +25,9 @@
 		4D001F55298179BE00B27D86 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F54298179BE00B27D86 /* ToDoViewModel.swift */; };
 		4D001F572981940C00B27D86 /* ColorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F562981940C00B27D86 /* ColorMap.swift */; };
 		4D04BD9E298445A0008FCCC2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D04BD9D298445A0008FCCC2 /* User.swift */; };
+		4D18401B29913927008B779B /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18401A29913927008B779B /* ProfileScreenView.swift */; };
+		4D18401E29914548008B779B /* ProfileLisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18401D29914548008B779B /* ProfileLisTableViewCell.swift */; };
+		4D1840202991455E008B779B /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18401F2991455E008B779B /* BaseTableViewCell.swift */; };
 		4D82957229883175009E02E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82957129883175009E02E9 /* Alert.swift */; };
 		4D82957429893C52009E02E9 /* RegisterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82957329893C52009E02E9 /* RegisterScreenView.swift */; };
 		4D82957629895810009E02E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82957529895810009E02E9 /* RegisterViewController.swift */; };
@@ -46,7 +48,6 @@
 		4D001F39298011C800B27D86 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		4D001F3D298014CF00B27D86 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		4D001F4029801E4400B27D86 /* ToDoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoScreenView.swift; sourceTree = "<group>"; };
-		4D001F422980253B00B27D86 /* AppointmentsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentsScreenView.swift; sourceTree = "<group>"; };
 		4D001F442980464A00B27D86 /* ToDoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D001F462980465500B27D86 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		4D001F4829815F1200B27D86 /* TaskDetailslViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailslViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +56,9 @@
 		4D001F54298179BE00B27D86 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
 		4D001F562981940C00B27D86 /* ColorMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMap.swift; sourceTree = "<group>"; };
 		4D04BD9D298445A0008FCCC2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4D18401A29913927008B779B /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
+		4D18401D29914548008B779B /* ProfileLisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLisTableViewCell.swift; sourceTree = "<group>"; };
+		4D18401F2991455E008B779B /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		4D82957129883175009E02E9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4D82957329893C52009E02E9 /* RegisterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenView.swift; sourceTree = "<group>"; };
 		4D82957529895810009E02E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +100,6 @@
 				4D001F502981639A00B27D86 /* Models */,
 				4D001F3329800C0A00B27D86 /* Commons */,
 				4D001F302980009A00B27D86 /* Delegate */,
-				4D001F2F2980009400B27D86 /* Resources */,
 				4D001F2C2980007E00B27D86 /* View */,
 				4D001F252980003800B27D86 /* Info.plist */,
 			);
@@ -107,8 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				4D001F3D298014CF00B27D86 /* LoginScreenView.swift */,
+				4D001F2F2980009400B27D86 /* Resources */,
 				4D82957329893C52009E02E9 /* RegisterScreenView.swift */,
 				4D001F4C29815FE800B27D86 /* Tasks */,
+				4D001F4D29815FFA00B27D86 /* Appointments */,
 				4D001F2E2980008D00B27D86 /* Base */,
 				4D001F2D2980008600B27D86 /* Controllers */,
 			);
@@ -120,8 +125,8 @@
 			children = (
 				4D001F1B2980003700B27D86 /* LoginViewController.swift */,
 				4D82957529895810009E02E9 /* RegisterViewController.swift */,
+				4D18401C29914271008B779B /* Profile */,
 				4D001F4A29815F1900B27D86 /* Tasks */,
-				4D8295772989916C009E02E9 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			children = (
 				4D001F3129800B8200B27D86 /* BaseView.swift */,
 				4D001F462980465500B27D86 /* BaseCell.swift */,
+				4D18401F2991455E008B779B /* BaseTableViewCell.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -177,7 +183,6 @@
 				4D001F4029801E4400B27D86 /* ToDoScreenView.swift */,
 				4D001F442980464A00B27D86 /* ToDoListCollectionViewCell.swift */,
 				4D001F4E2981602E00B27D86 /* TaskDetailsScreenView.swift */,
-				4D001F4D29815FFA00B27D86 /* Appointments */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -185,7 +190,8 @@
 		4D001F4D29815FFA00B27D86 /* Appointments */ = {
 			isa = PBXGroup;
 			children = (
-				4D001F422980253B00B27D86 /* AppointmentsScreenView.swift */,
+				4D18401A29913927008B779B /* ProfileScreenView.swift */,
+				4D18401D29914548008B779B /* ProfileLisTableViewCell.swift */,
 			);
 			path = Appointments;
 			sourceTree = "<group>";
@@ -207,6 +213,14 @@
 				4D829579298992D6009E02E9 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4D18401C29914271008B779B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4D8295772989916C009E02E9 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,12 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D18401B29913927008B779B /* ProfileScreenView.swift in Sources */,
 				4D001F55298179BE00B27D86 /* ToDoViewModel.swift in Sources */,
 				4D82957A298992D6009E02E9 /* RegisterViewModel.swift in Sources */,
 				4D82957629895810009E02E9 /* RegisterViewController.swift in Sources */,
 				4D001F4F2981602E00B27D86 /* TaskDetailsScreenView.swift in Sources */,
 				4D001F1C2980003700B27D86 /* LoginViewController.swift in Sources */,
-				4D001F432980253B00B27D86 /* AppointmentsScreenView.swift in Sources */,
 				4D82957429893C52009E02E9 /* RegisterScreenView.swift in Sources */,
 				4D001F3A298011C800B27D86 /* ToDoViewController.swift in Sources */,
 				4D001F472980465500B27D86 /* BaseCell.swift in Sources */,
@@ -295,8 +309,10 @@
 				4D001F572981940C00B27D86 /* ColorMap.swift in Sources */,
 				4D001F182980003700B27D86 /* AppDelegate.swift in Sources */,
 				4D001F4929815F1200B27D86 /* TaskDetailslViewController.swift in Sources */,
+				4D1840202991455E008B779B /* BaseTableViewCell.swift in Sources */,
 				4D001F1A2980003700B27D86 /* SceneDelegate.swift in Sources */,
 				4D001F3629800C3000B27D86 /* UIView+Extension.swift in Sources */,
+				4D18401E29914548008B779B /* ProfileLisTableViewCell.swift in Sources */,
 				4D001F452980464A00B27D86 /* ToDoListCollectionViewCell.swift in Sources */,
 				4D8295782989916C009E02E9 /* ProfileViewController.swift in Sources */,
 				4D82957229883175009E02E9 /* Alert.swift in Sources */,

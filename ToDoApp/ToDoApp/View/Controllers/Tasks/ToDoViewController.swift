@@ -84,7 +84,11 @@ extension ToDoViewController: UICollectionViewDelegate, UICollectionViewDataSour
             self.customView.collectionView.reloadData()
             taskDetailsViewController.dismiss(animated: true)
         }
-        
+        if let sheet = taskDetailsViewController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.prefersGrabberVisible = true
+            
+        }
         present(taskDetailsViewController, animated: true)
     }
 }

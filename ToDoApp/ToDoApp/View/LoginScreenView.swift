@@ -13,7 +13,7 @@ class LoginScreenView: BaseView {
     
     lazy var emailTextField: UITextField = {
         let emailTextField = UITextField()
-        emailTextField.placeholder = "Insira seu email"
+        emailTextField.placeholder = "Insert your email"
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.borderColor = UIColor.systemGray4.cgColor
         emailTextField.layer.cornerRadius = 8
@@ -25,7 +25,7 @@ class LoginScreenView: BaseView {
         
     lazy var passwordTextField: UITextField = {
         let passwordTextField = UITextField()
-        passwordTextField.placeholder = "Insira sua senha"
+        passwordTextField.placeholder = "Insert your password"
         passwordTextField.layer.borderWidth = 2
         passwordTextField.layer.borderColor = UIColor.systemGray4.cgColor
         passwordTextField.layer.cornerRadius = 8
@@ -38,7 +38,7 @@ class LoginScreenView: BaseView {
     
     lazy var forgotPasswordButton: UIButton = {
         let forgotPasswordButton = UIButton()
-        forgotPasswordButton.setTitle("Esqueceu sua senha?", for: .normal)
+        forgotPasswordButton.setTitle("Forgot your password?", for: .normal)
         forgotPasswordButton.setTitleColor(UIColor.systemGray, for: .normal)
         forgotPasswordButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         return forgotPasswordButton

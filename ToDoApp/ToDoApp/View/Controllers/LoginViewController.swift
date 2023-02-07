@@ -35,18 +35,13 @@ class LoginViewController: UIViewController {
         
         for x in 0..<items.count {
             items[x].image = UIImage(systemName: images[x])
-        }
+        }   
         
         tabBar.modalPresentationStyle = .fullScreen
         
-        if user?.email != customView.emailTextField.text ?? stringLiteral ||
-            user?.password != customView.passwordTextField.text ?? stringLiteral {
-            
-            Alert.showAlert(controller: self, titulo: "Ops!", mensagem: "E-mail ou senha estão incorretos.", actions: [UIAlertAction(title: "OK", style: .default)], preferredStyle: .alert)
-            
-        } else {
+
             navigationController?.pushViewController(tabBar, animated: true)
-        }
+        
     }
     
     @objc func goToRegister(){
