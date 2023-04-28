@@ -13,7 +13,6 @@
 		4D001F212980003800B27D86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D001F202980003800B27D86 /* Assets.xcassets */; };
 		4D001F242980003800B27D86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D001F222980003800B27D86 /* LaunchScreen.storyboard */; };
 		4D001F3229800B8200B27D86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F3129800B8200B27D86 /* BaseView.swift */; };
-		4D001F3629800C3000B27D86 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F3529800C3000B27D86 /* UIView+Extension.swift */; };
 		4D001F3A298011C800B27D86 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F39298011C800B27D86 /* ToDoViewController.swift */; };
 		4D001F3E298014CF00B27D86 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F3D298014CF00B27D86 /* LoginScreenView.swift */; };
 		4D001F4129801E4400B27D86 /* ToDoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D001F4029801E4400B27D86 /* ToDoScreenView.swift */; };
@@ -28,10 +27,12 @@
 		4D18401B29913927008B779B /* ProfileScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18401A29913927008B779B /* ProfileScreenView.swift */; };
 		4D18401E29914548008B779B /* ProfileLisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18401D29914548008B779B /* ProfileLisTableViewCell.swift */; };
 		4D1840202991455E008B779B /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D18401F2991455E008B779B /* BaseTableViewCell.swift */; };
+		4D1E3FBB29E045E40012B3E2 /* TextfieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3FBA29E045E40012B3E2 /* TextfieldComponent.swift */; };
+		4D1E3FBE29E19B970012B3E2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3FBD29E19B970012B3E2 /* LoginViewModel.swift */; };
+		4D1E3FC729E19E260012B3E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E3FC629E19E260012B3E2 /* ProfileViewController.swift */; };
 		4D82957229883175009E02E9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82957129883175009E02E9 /* Alert.swift */; };
 		4D82957429893C52009E02E9 /* RegisterScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82957329893C52009E02E9 /* RegisterScreenView.swift */; };
 		4D82957629895810009E02E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82957529895810009E02E9 /* RegisterViewController.swift */; };
-		4D8295782989916C009E02E9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8295772989916C009E02E9 /* ProfileViewController.swift */; };
 		4D82957A298992D6009E02E9 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D829579298992D6009E02E9 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +45,6 @@
 		4D001F232980003800B27D86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D001F252980003800B27D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D001F3129800B8200B27D86 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		4D001F3529800C3000B27D86 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4D001F39298011C800B27D86 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		4D001F3D298014CF00B27D86 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
 		4D001F4029801E4400B27D86 /* ToDoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoScreenView.swift; sourceTree = "<group>"; };
@@ -59,11 +59,13 @@
 		4D18401A29913927008B779B /* ProfileScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreenView.swift; sourceTree = "<group>"; };
 		4D18401D29914548008B779B /* ProfileLisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLisTableViewCell.swift; sourceTree = "<group>"; };
 		4D18401F2991455E008B779B /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		4D1E3FBA29E045E40012B3E2 /* TextfieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldComponent.swift; sourceTree = "<group>"; };
+		4D1E3FBD29E19B970012B3E2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		4D1E3FC629E19E260012B3E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D82957129883175009E02E9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		4D82957329893C52009E02E9 /* RegisterScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenView.swift; sourceTree = "<group>"; };
 		4D82957529895810009E02E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		4D8295772989916C009E02E9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		4D829579298992D6009E02E9 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		4D829579298992D6009E02E9 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterViewModel.swift; path = ../../ViewModel/RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		4D001F162980003700B27D86 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				4D001F2F2980009400B27D86 /* Resources */,
 				4D001F53298179AE00B27D86 /* ViewModel */,
 				4D001F502981639A00B27D86 /* Models */,
 				4D001F3329800C0A00B27D86 /* Commons */,
@@ -109,26 +112,15 @@
 		4D001F2C2980007E00B27D86 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4D001F3D298014CF00B27D86 /* LoginScreenView.swift */,
-				4D001F2F2980009400B27D86 /* Resources */,
-				4D82957329893C52009E02E9 /* RegisterScreenView.swift */,
+				4D001F4A29815F1900B27D86 /* Tasks */,
+				4D001F4D29815FFA00B27D86 /* Profile */,
+				4D1E3FBF29E19BA00012B3E2 /* Register */,
+				4D1E3FBC29E19B810012B3E2 /* Login */,
+				4D1E3FB929E045D10012B3E2 /* Components */,
 				4D001F4C29815FE800B27D86 /* Tasks */,
-				4D001F4D29815FFA00B27D86 /* Appointments */,
 				4D001F2E2980008D00B27D86 /* Base */,
-				4D001F2D2980008600B27D86 /* Controllers */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4D001F2D2980008600B27D86 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4D001F1B2980003700B27D86 /* LoginViewController.swift */,
-				4D82957529895810009E02E9 /* RegisterViewController.swift */,
-				4D18401C29914271008B779B /* Profile */,
-				4D001F4A29815F1900B27D86 /* Tasks */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		4D001F2E2980008D00B27D86 /* Base */ = {
@@ -162,7 +154,6 @@
 		4D001F3329800C0A00B27D86 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
-				4D001F3529800C3000B27D86 /* UIView+Extension.swift */,
 				4D001F562981940C00B27D86 /* ColorMap.swift */,
 			);
 			path = Commons;
@@ -174,7 +165,8 @@
 				4D001F39298011C800B27D86 /* ToDoViewController.swift */,
 				4D001F4829815F1200B27D86 /* TaskDetailslViewController.swift */,
 			);
-			path = Tasks;
+			name = Tasks;
+			path = Controllers/Tasks;
 			sourceTree = "<group>";
 		};
 		4D001F4C29815FE800B27D86 /* Tasks */ = {
@@ -187,13 +179,14 @@
 			path = Tasks;
 			sourceTree = "<group>";
 		};
-		4D001F4D29815FFA00B27D86 /* Appointments */ = {
+		4D001F4D29815FFA00B27D86 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 				4D18401A29913927008B779B /* ProfileScreenView.swift */,
+				4D1E3FC629E19E260012B3E2 /* ProfileViewController.swift */,
 				4D18401D29914548008B779B /* ProfileLisTableViewCell.swift */,
 			);
-			path = Appointments;
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		4D001F502981639A00B27D86 /* Models */ = {
@@ -210,17 +203,36 @@
 			isa = PBXGroup;
 			children = (
 				4D001F54298179BE00B27D86 /* ToDoViewModel.swift */,
-				4D829579298992D6009E02E9 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		4D18401C29914271008B779B /* Profile */ = {
+		4D1E3FB929E045D10012B3E2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				4D8295772989916C009E02E9 /* ProfileViewController.swift */,
+				4D1E3FBA29E045E40012B3E2 /* TextfieldComponent.swift */,
 			);
-			path = Profile;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		4D1E3FBC29E19B810012B3E2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4D001F1B2980003700B27D86 /* LoginViewController.swift */,
+				4D001F3D298014CF00B27D86 /* LoginScreenView.swift */,
+				4D1E3FBD29E19B970012B3E2 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		4D1E3FBF29E19BA00012B3E2 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				4D82957329893C52009E02E9 /* RegisterScreenView.swift */,
+				4D82957529895810009E02E9 /* RegisterViewController.swift */,
+				4D829579298992D6009E02E9 /* RegisterViewModel.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,7 +313,9 @@
 				4D001F1C2980003700B27D86 /* LoginViewController.swift in Sources */,
 				4D82957429893C52009E02E9 /* RegisterScreenView.swift in Sources */,
 				4D001F3A298011C800B27D86 /* ToDoViewController.swift in Sources */,
+				4D1E3FBE29E19B970012B3E2 /* LoginViewModel.swift in Sources */,
 				4D001F472980465500B27D86 /* BaseCell.swift in Sources */,
+				4D1E3FC729E19E260012B3E2 /* ProfileViewController.swift in Sources */,
 				4D001F3E298014CF00B27D86 /* LoginScreenView.swift in Sources */,
 				4D001F52298163A700B27D86 /* Task.swift in Sources */,
 				4D001F4129801E4400B27D86 /* ToDoScreenView.swift in Sources */,
@@ -311,10 +325,9 @@
 				4D001F4929815F1200B27D86 /* TaskDetailslViewController.swift in Sources */,
 				4D1840202991455E008B779B /* BaseTableViewCell.swift in Sources */,
 				4D001F1A2980003700B27D86 /* SceneDelegate.swift in Sources */,
-				4D001F3629800C3000B27D86 /* UIView+Extension.swift in Sources */,
 				4D18401E29914548008B779B /* ProfileLisTableViewCell.swift in Sources */,
 				4D001F452980464A00B27D86 /* ToDoListCollectionViewCell.swift in Sources */,
-				4D8295782989916C009E02E9 /* ProfileViewController.swift in Sources */,
+				4D1E3FBB29E045E40012B3E2 /* TextfieldComponent.swift in Sources */,
 				4D82957229883175009E02E9 /* Alert.swift in Sources */,
 				4D001F3229800B8200B27D86 /* BaseView.swift in Sources */,
 			);

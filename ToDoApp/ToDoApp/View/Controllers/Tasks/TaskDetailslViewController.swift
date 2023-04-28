@@ -16,13 +16,13 @@ class TaskDetailslViewController: UIViewController {
     }
     
     func setDataCustomView(taskName: String, info: String, tag: String, date: Date) {
-        customView.taskNameLbl.text = taskName
+        customView.taskNameLabel.text = taskName
         if info != "" {
             customView.descriptionTextField.text = info
             customView.descriptionTextField.textColor = UIColor.label
         }
-        customView.tagLbl.text = tag
-        customView.tagLbl.backgroundColor = taskColorMap()[tag]
+        customView.tagLabel.text = tag
+        customView.tagLabel.backgroundColor = taskColorMap()[tag]
         customView.taskDate.date = date
     }
     
@@ -33,7 +33,7 @@ class TaskDetailslViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customView.taskNameLbl.delegate = self
+        customView.taskNameLabel.delegate = self
         customView.descriptionTextField.delegate = self
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(makeLblEditable))
@@ -52,18 +52,18 @@ class TaskDetailslViewController: UIViewController {
     }
     
     @objc func makeLblEditable() {
-        customView.taskNameLbl.isEnabled = true
-        customView.taskNameLbl.borderStyle = .roundedRect
+        customView.taskNameLabel.isEnabled = true
+        customView.taskNameLabel.borderStyle = .roundedRect
         customView.saveButton.isEnabled = true
     }
     
     @objc func makeLbldisable() {
-        customView.taskNameLbl.isEnabled = false
-        customView.taskNameLbl.borderStyle = .none
+        customView.taskNameLabel.isEnabled = false
+        customView.taskNameLabel.borderStyle = .none
     }
     
     @objc func editTasks() {
-        updateTaskName(customView.taskNameLbl.text ?? "", "Easy", customView.descriptionTextField.text ?? "", customView.taskDate.date )
+        updateTaskName(customView.taskNameLabel.text ?? "", "Easy", customView.descriptionTextField.text ?? "", customView.taskDate.date )
     }
 }
 

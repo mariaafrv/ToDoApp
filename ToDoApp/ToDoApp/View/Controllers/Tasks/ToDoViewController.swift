@@ -14,7 +14,7 @@ class ToDoViewController: UIViewController {
         self.view = view
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
         customView.collectionView.delegate = self
         customView.collectionView.dataSource = self
